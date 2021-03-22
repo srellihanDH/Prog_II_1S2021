@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= titulo %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('partials/materia') %>
+    <h1><%= encabezado %></h1>
+    <p>Bienvenido <%= nombre %> !!</p>
+
+    <% for (let index = 1; index <= 5; index++) { %>
+      <p>Numero: <%= index %></p>
+    <% } %>
+
+  </body>
+</html>
