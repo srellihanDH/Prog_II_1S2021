@@ -147,9 +147,6 @@ let autos = {
                 respuesta.push(autos.lista[i])
             }
         }
-        if (respuesta.length == 0){
-            respuesta = `Por el momento no tenenmos autos de color ${color}.`
-        }
         return respuesta
     },
     
@@ -159,9 +156,6 @@ let autos = {
             if (autos.lista[i].marca == marca.toLowerCase()) {
                 respuesta.push(autos.lista[i])
             }
-        }
-        if (respuesta.length == 0){
-            respuesta = `Por el momento no tenenmos autos de la marca ${marca}.`
         }
         return respuesta
         
@@ -173,9 +167,6 @@ let autos = {
             if (autos.lista[i].anio == anio) {
                 respuesta.push(autos.lista[i])
             }
-        }
-        if (respuesta.length == 0){
-            respuesta = `Por el momento no tenenmos autos del año ${anio}.`
         }
         return respuesta        
     }
