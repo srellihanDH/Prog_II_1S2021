@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hola</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    Modificar Peli<br>
+    <br>
+    <form action="/modificar" method="POST">
+      Titulo: <input type="text" name="titulo" value="<%= peli.title %>"><br>
+      Genero: 
+      <select name="genero">
+        <option value="<%= peli.genreId %>">---</option>
+        <% generos.forEach(genero => { %>
+          <option value="<%= genero.id %>"><%= genero.name %></option>
+        <% }) %>
+      </select>
+      <input type="hidden" name="id" value="<%= peli.id %>">
+      <input type="submit" value="Modificar">
+    </form>
+  </body>
+</html>

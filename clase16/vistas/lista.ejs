@@ -7,6 +7,10 @@
   <body>
     <% lista.forEach(element => { %>
       <p> <%= element.title %> </p>
+      <form action="/modificar" method="GET">
+        <input type="hidden" name="id" value="<%= element.id %>">
+        <input type="submit" value="Modificar">
+      </form>
       <form action="/borrar" method="POST">
         <input type="hidden" name="id" value="<%= element.id %>">
         <input type="submit" value="Borrar">

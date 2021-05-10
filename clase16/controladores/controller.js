@@ -40,4 +40,26 @@ module.exports = {
             res.redirect('/buscar?filtro=');
         });
     },
+
+    modificarForm: (req, res) => {
+        db.Pelicula.findByPk(req.query.id).then(resultadoPeli => {
+            db.Genero.findAll().then(resultadoGeneros => {
+                res.render('modificar', {peli: resultadoPeli, generos: resultadoGeneros});
+            });
+        });
+    },
+
+    modificarPost: (req, res) => {
+        db.Pelicula.update({
+            title: req.body.titulo,
+            genreId: req.body.genero
+        },{
+            where: {
+                id: req.body.id
+            }
+        }).then(() => {
+            res.redirect('/buscar?filtro=');
+        });
+    },
+
 }
