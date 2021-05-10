@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hola</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    Nueva Peli<br>
+    ID: <%= peli.id %><br>
+    Titulo: <%= peli.title %><br>
+    <br>
+    <br>
+    <form action="/borrar" method="POST">
+      <input type="hidden" name="id" value="<%= peli.id %>">
+      <input type="submit" value="Borrar">
+    </form>
+  </body>
+</html>

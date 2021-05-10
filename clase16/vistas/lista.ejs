@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hola</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% lista.forEach(element => { %>
+      <p> <%= element.title %> </p>
+      <form action="/borrar" method="POST">
+        <input type="hidden" name="id" value="<%= element.id %>">
+        <input type="submit" value="Borrar">
+      </form>
+      <br>
+    <% }) %>
+  </body>
+</html>
