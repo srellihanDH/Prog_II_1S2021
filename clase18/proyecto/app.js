@@ -37,6 +37,10 @@ app.use(function(req, res, next) {
     db.Usuario.findByPk(req.cookies.userId).then(resultado => {
       req.session.usuario = resultado.name;
       req.session.id = resultado.id;
+
+      //resultado.pass = "";
+      //req.session.usuario = resultado;
+
       return next();
     });
   } else {

@@ -45,6 +45,9 @@ module.exports = {
                 req.session.usuario = usuario.name;
                 req.session.id = usuario.id;
 
+                //usuario.pass = "";
+                //req.session.usuario = usuario;
+
                 // En caso de que haya seleccionado recodarme, guardamos una cookie
                 if(req.body.remember){
                     res.cookie('userId', usuario.id, { maxAge: 1000 * 60 * 5 });
