@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hola</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <p>Bienvenido <%= usuario %></p>
+
+    <!-- Validar si el usuario esta loguaedo (cargado en locals), para mostrarle diferentes botones -->
+    <% if(! logueado) { %>
+
+    <form action="/login">
+      <input type="submit" value="Login">
+    </form>
+    <form action="/register">
+      <input type="submit" value="Register">
+    </form>
+
+    <% } else { %>
+
+    <form action="/logout">
+      <input type="submit" value="Exit">
+    </form>
+
+    <% } %>
+
+  </body>
+</html>
