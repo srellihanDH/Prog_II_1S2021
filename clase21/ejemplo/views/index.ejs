@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Razas de perros</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% if(error) {%>
+      <span>Hubo un ERROR: <%=error%></span><br><br><br><br>
+    <% } %>
+
+    <form action="/raza">
+      <input type="number" name="id" id="">
+      <input type="submit" value="Buscar Raza">
+    </form>
+    <br><br><br><br><br>
+    <form action="/raza" method="post">
+      <input type="text" name="raza" id="">
+      <input type="submit" value="Crear Raza">
+    </form>
+  </body>
+</html>
